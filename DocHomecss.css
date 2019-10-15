@@ -1,0 +1,38 @@
+*{
+    max-width: 100%;
+}
+
+.logo{
+    height: 75px;
+    border-radius: 100%;
+}
+
+.navbar .navbar-brand{
+    color: #fff;
+    font-size: 300%;
+    margin-left: 30%;
+    transition: 0.2s;
+}
+
+.navbar .navbar-brand:hover{
+    color: #f00;
+}
+
+.container{
+    margin: 10% 10% 0 10%;
+}
+
+.form-group .form-control{
+    width: 70%;
+}
+h3{
+    text-align: center;
+    font-size: 35px;
+}
+.new button{
+    position: relative;
+    left: 47%;
+}
+h5{
+    color: #f00;
+}
