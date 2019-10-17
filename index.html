@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap-grid.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="maincss.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <title>Home</title>
 </head>
+
 <body>
 
-    <!-- ----------------nav - bar ---------------------- -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="logo.png" class="logo">
-        <a class="navbar-brand" href="#">Let Live MediCare</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
-            </li>
-          </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: #0262ac!important;">
+    <a href="index.html"><img src="./logo.png" class="logo"></a>
+    <a class="navbar-brand" href="index.html">Let Live MediCare</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" style="color: white!important;" href="#">About us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="jumbotron" style="background: #cef url(./background.jpg) no-repeat center center fixed;">
+    <div class="container align-middle">
+
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+          <a href="DocHome.html"><button type="button" class="btn btn-primary btn-lg"
+              style="padding: 15px 20px; margin-bottom: 20px;">Doctor/Pathologist</button>
+            <img src="docicon.jpg" class="img-responsive" width=250px height=250px style="border-radius: 100%;"></a>
         </div>
-      </nav>
-    
-    <!-- ---------------- container---------------------- -->
-      <div class="row container">
-          <div class="col-lg-4">
-              <a href="DocHomehtml.html" class="links">Doctor/Pathologist
-              </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="Patient_Signin.html" class="links">Patient</a>
-          </div>
-          <div class="col-lg-4">
-            <a href="storepg1.html" class="links">Medical Store</a>
-          </div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <!----------------images------------------>
-          <form>
-              <table>
-                  <tr>
-                  <td>
-                  <img src="doctor icon.png" class="pic1"></td>
-                  <td>
-                  <img src="patienticon.png" class="pic2">
-                </td>
-                  <td>
-                  <img src="storeicon.png" class="pic3" ></td>
-                  </tr> 
-              </table>
-          </form>
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-3">
+          <a href="PatientSignin.html"><button type="button" class="btn btn-primary btn-lg"
+              style="padding: 15px 75px; margin-bottom: 20px;">Patient</button>
+            <img src="patienticon.jpg" class="img-responsive" width=250px height=250px style="border-radius: 100%;"></a>
+        </div>
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-3">
+          <a href="storelogin.html"><button type="button" class="btn btn-primary btn-lg"
+              style="padding: 15px 38px; margin-bottom: 20px;">Medical Store</button>
+            <img src="storeicon.jpg" class="img-responsive" width=250px height=250px style="border-radius: 100%;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
