@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
     <title>Doctor/Pathologist</title>
 </head>
 
 <body>
+    <nav class="navbar sticky-top navbar-light navbar-expand-lg bg-faded justify-content-center">
+        <a class="navbar-brand" href="index.html"><img src="./images/favicon.svg" class="logo"></a>
+        <a class="navbar-brand mx-auto" href="index.html">Let Live MediCare</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+            </li>
+        </ul>
+    </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: #0262ac!important;">
-        <a href="index.html"><img src="logo.png" class="logo"></a>
-        <a class="navbar-brand" href="index.html">Let Live MediCare</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
+    <div class="jumbotron">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -29,26 +34,31 @@
                 </li>
             </ul>
         </div>
-    </nav>
-    <div class="jumbotron" style="background: #cef url(./background.jpg) no-repeat center center fixed;">
-        <div class="container align-middle">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" required id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
+        </nav>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group col-md">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" required id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group col-md">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" required id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="submit" formaction="PatientSearch.html"
+                                class="btn btn-primary">Sign in</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" required id="exampleInputPassword1"
-                        placeholder="Password">
-                </div>
-                <button type="submit" formaction="PatientSearch.html" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
