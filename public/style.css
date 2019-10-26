@@ -3,7 +3,7 @@
 }
 
 .logo{
-    height: 75px;
+    height: 5px !important;
     border-radius: 100%;
 }
 
@@ -38,6 +38,3 @@ h5{
     color: #f00;
 }
 
-
-
-d
