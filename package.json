@@ -1,24 +1,28 @@
 {
   "name": "let-live-medicare",
   "version": "1.0.0",
-  "description": "A hassle free medical app",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shreya549/Let-Live-Medicare.git"
+    "url": "git+https://github.com/joshijai2/Let-Live-Medicare.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Shreya549/Let-Live-Medicare/issues"
+    "url": "https://github.com/joshijai2/Let-Live-Medicare/issues"
   },
-  "homepage": "https://github.com/Shreya549/Let-Live-Medicare#readme",
+  "homepage": "https://github.com/joshijai2/Let-Live-Medicare#readme",
   "dependencies": {
+<<<<<<< HEAD
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "mongodb": "^3.3.3"
+=======
+    "opn": "^6.0.0"
+>>>>>>> 1cd9f9d17284f5138e7de79df3b891ebc8b09a2b
   }
 }
