@@ -45,14 +45,6 @@ app.get('/DocResult', function (req, res) {
 
 
 
-app.get('/storelogin', function (req, res) {
-    res.sendFile(__dirname + "/storelogin.html");
-});
-
-app.get('/StoreSignup', function (req, res) {
-    res.sendFile(__dirname + "/StoreSignup.html");
-});
-
 app.get('/images/android-chrome-192x192.png', function(req, res){
     res.sendFile(__dirname + "/images/android-chrome-192x192.png");
 });
