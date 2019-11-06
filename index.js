@@ -10,13 +10,22 @@ app.get('/',function(req,res){
     res.render('index');
 });
 
+app.get('/dochome', function(req,res){
+    res.render('DocHome');
+})
+
+app.get('/patSignIn', function(req, res){
+    res.render('PatSignIn');
+})
+
+app.get('/store', function(req, res){
+    res.render('Store');
+})
+
 app.get('/style.css', function (req, res) {
     res.sendFile(__dirname + "/style.css");
 });
 
-app.get('/DocHome', function (req, res) {
-    res.sendFile(__dirname + "/DocHome.html");
-})
 
 app.get('/DocResult', function (req, res) {
     res.sendFile(__dirname + "/DocResult.html");
