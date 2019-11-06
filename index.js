@@ -2,7 +2,7 @@ var express = require('express');
 var opn = require('opn');
 var app = express();
 
-<<<<<<< HEAD
+
 var ejs = require('ejs');
 
 app.set('view engine', ejs);

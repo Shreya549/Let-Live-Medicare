@@ -17,12 +17,9 @@
   },
   "homepage": "https://github.com/joshijai2/Let-Live-Medicare#readme",
   "dependencies": {
-<<<<<<< HEAD
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "mongodb": "^3.3.3"
-=======
+    "mongodb": "^3.3.3",
     "opn": "^6.0.0"
->>>>>>> 1cd9f9d17284f5138e7de79df3b891ebc8b09a2b
   }
 }
