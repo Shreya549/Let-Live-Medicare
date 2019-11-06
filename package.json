@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Shreya549/Let-Live-Medicare#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3"
   }
 }

@@ -1,8 +1,13 @@
 var express = require('express');
 var app = express();
 
+var ejs = require('ejs');
+
+app.set('view engine', ejs);
+app.use(express.static('./public'));
+
 app.get('/',function(req,res){
-    res.sendFile(__dirname + '/index.html');
+    res.render('index');
 });
 
 app.use(express.static('public'));
