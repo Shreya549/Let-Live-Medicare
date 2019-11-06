@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
   <link rel="manifest" href="./images/site.webmanifest">
-  <title>Home</title>
+  <title>Sign in</title>
 </head>
 
 <body>
@@ -27,22 +27,37 @@
   </nav>
 
   <div class="jumbotron">
-    <div class="container px-lg-5">
-      <div class="row mx-lg-n5">
-        <div class="col-lg py-3 px-lg-5 text-center">
-          <a href="DocHome"><button type="button" class="btn btn-primary btn-lg">Doctor/Pathologist</button>
-            <img src="./images/docicon.jpg" class="img-fluid""></a>
-        </div>
-        <div class=" col-lg py-3 px-lg-5 text-center">
-            <a href="PatientSignin"><button type="button" class="btn btn-primary btn-lg">Patient</button>
-              <img src="./images/patienticon.jpg" class="img-fluid""></a>
-        </div>
-        <div class=" col-lg py-3 px-lg-5 text-center">
-              <a href="storelogin"><button type="button" class="btn btn-primary btn-lg">Medical Store</button>
-                <img src="./images/storeicon.jpg" class="img-fluid"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Patient Number</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Patient Number">
+              <small id="emailHelp" class="form-text text-muted">Don't worry! Your data is safe with us.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="col-sm-3">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
         </div>
       </div>
     </div>
+    <div class="row py-lg-5">
+      <div class="col-lg-4">
+        New Patient?
+        <div class="col-md-5">
+          <form action="">
+            <button formaction="PatientSignup.html" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </body>
 
