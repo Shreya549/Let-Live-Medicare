@@ -22,6 +22,18 @@ app.get('/store', function(req, res){
     res.render('Store');
 })
 
+app.get('/PatSearch', function(req, res){
+    res.render('PatSearch');
+})
+
+app.get('/PatSignUp', function(req, res){
+    res.render('PatSignUp');
+})
+
+app.get('/StoreSignUp', function(req, res){
+    res.render('StoreSignUp');
+})
+
 app.get('/style.css', function (req, res) {
     res.sendFile(__dirname + "/style.css");
 });
@@ -31,17 +43,7 @@ app.get('/DocResult', function (req, res) {
     res.sendFile(__dirname + "/DocResult.html");
 });
 
-app.get('/PatientSearch', function (req, res) {
-    res.sendFile(__dirname + "/PatientSearch.html");
-});
 
-app.get('/PatientSignin', function (req, res) {
-    res.sendFile(__dirname + "/PatientSignin.html");
-});
-
-app.get('/PatientSignup', function (req, res) {
-    res.sendFile(__dirname + "/PatientSignup.html");
-});
 
 app.get('/storelogin', function (req, res) {
     res.sendFile(__dirname + "/storelogin.html");
