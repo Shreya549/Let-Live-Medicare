@@ -80,7 +80,7 @@ app.post('/Pat_Sign_In', function(req, res){
         if (pass == passorig)
         {
             console.log("User Verified");
-            res.redirect('/');
+            res.redirect('/SelfDetails');
         }
 
         else{
@@ -92,7 +92,7 @@ app.post('/Pat_Sign_In', function(req, res){
     });
 })
 
-app.get('/store', function(req, res){
+app.get('/storelogin', function(req, res){
     res.render('Store');
 })
 
