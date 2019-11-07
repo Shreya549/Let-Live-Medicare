@@ -98,13 +98,13 @@ app.get('/storelogin', function(req, res){
 app.get('/Personal', function(req,res){
     res.render('Personal');
 })
-app.get('/Medicine', function(req,res){
+app.get('/personal/Medicine', function(req,res){
     res.render('Medicine');
 })
-app.get('/Health', function(req,res){
+app.get('/personal/Health', function(req,res){
     res.render('Health');
 })
-app.get('/Test', function(req,res){
+app.get('/personal/Test', function(req,res){
     res.render('Test');
 })
 
@@ -149,6 +149,13 @@ app.get('/PatSearch', function(req, res){
     res.render('PatSearch');
 })
 
+app.post('/pat_search', function(req, res){
+    res.redirect('/PatDetails');
+})
+
+app.get('/PatDetails', function(req, res){
+    res.render('PatDetails');
+})
 app.get('/PatSignUp', function(req, res){
     res.render('PatSignUp');
 })
