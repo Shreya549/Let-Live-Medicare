@@ -32,7 +32,6 @@ app.post('/DocSignIn', function(req, res){
     var pass = req.body.password;
     var user = req.body.email;
 
-    console.log("HIII");
     MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("LetLiveMedicare");
@@ -67,27 +66,33 @@ app.post('/Pat_Sign_In', function(req, res){
     var url = "mongodb://localhost:27017/";
 
     var pass = req.body.pass;
-    var patnum = req.body.patnum;
+    var user = req.body.user;
 
     MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("LetLiveMedicare");
-    var query = { email : user };
+    var query = { "username" : user };
+
+    dbo.collection("Patient").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result)
+    });
 
     dbo.collection("Patient").find(query).toArray(function(err, result) {
         if (err) throw err;
-        var passorig = result[0]["password"];
+        console.log(result);
+        //var passorig = result[0]["password"];
 
-        if (pass == passorig)
-        {
-            console.log("User Verified");
-            res.redirect('/PatSearch');
-        }
+        //if (pass == passorig)
+        //{
+        //    console.log("User Verified");
+        //    res.redirect('/ViewInfo');
+        //}
 
-        else{
-            console.log("Wrong User Id or Password");
-            res.redirect('/dochome');
-        }
+        //else{
+        //    console.log("Wrong User Id or Password");
+        //    res.redirect('/PatientSignIn');
+        //}
         db.close();
     });
     });
@@ -97,7 +102,7 @@ app.get('/store', function(req, res){
     res.render('Store');
 })
 
-app.get('/pat_signin', function(req, res){
+app.post('/pat_signin', function(req, res){
     var name = req.body.name;
     var age = req.body.age;
     var gender = req.body.gender;
