@@ -1,10 +1,20 @@
 var express = require('express');
 var opn = require('opn');
 var app = express();
-
+var bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const mongoose = require('mongoose'); 
+mongoose.connect('mongodb://localhost:27017/LetLiveMedicare'); 
+var db=mongoose.connection; 
+db.on('error', console.log.bind(console, "connection error")); 
+db.once('open', function(callback){ 
+    console.log("connection succeeded"); 
+}) 
 
 app.get('/',function(req,res){
     res.render('index');
@@ -12,6 +22,38 @@ app.get('/',function(req,res){
 
 app.get('/dochome', function(req,res){
     res.render('DocHome');
+})
+
+app.post('/DocSignIn', function(req, res){
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    var pass = req.body.password;
+    var user = req.body.email;
+
+    console.log("HIII");
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("LetLiveMedicare");
+    var query = { email : user };
+
+    dbo.collection("Doctor").find(query).toArray(function(err, result) {
+        if (err) throw err;
+        var passorig = result[0]["password"];
+
+        if (pass == passorig)
+        {
+            console.log("User Verified");
+            res.redirect('/PatSearch');
+        }
+
+        else{
+            console.log("Wrong User Id or Password");
+            res.redirect('/dochome');
+        }
+        db.close();
+    });
+    });
 })
 
 app.get('/patSignIn', function(req, res){

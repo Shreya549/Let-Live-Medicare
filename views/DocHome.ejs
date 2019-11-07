@@ -38,21 +38,21 @@
         <div class="jumbotron">
             <div class="container">
                 <div class="col-lg-6">
-                    <form>
+                    <form method = post>
                         <div class="form-group col-md">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" required id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter email">
+                                aria-describedby="emailHelp" placeholder="Enter email" name = "email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>
                         </div>
                         <div class="form-group col-md">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" required id="exampleInputPassword1"
-                                placeholder="Password">
+                                placeholder="Password" name = "password">
                         </div>
                         <div class="col-sm-4">
-                            <button type="submit" formaction="/PatSearch"
+                            <button type="submit" formaction="/DocSignIn"
                                 class="btn btn-primary">Sign in</button>
                         </div>
                     </form>
