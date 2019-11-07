@@ -73,26 +73,20 @@ app.post('/Pat_Sign_In', function(req, res){
     var dbo = db.db("LetLiveMedicare");
     var query = { "username" : user };
 
-    dbo.collection("Patient").find({}).toArray(function(err, result) {
-        if (err) throw err;
-        console.log(result)
-    });
-
     dbo.collection("Patient").find(query).toArray(function(err, result) {
         if (err) throw err;
         console.log(result);
-        //var passorig = result[0]["password"];
+        var passorig = result[0]["password"];
+        if (pass == passorig)
+        {
+            console.log("User Verified");
+            res.redirect('/');
+        }
 
-        //if (pass == passorig)
-        //{
-        //    console.log("User Verified");
-        //    res.redirect('/ViewInfo');
-        //}
-
-        //else{
-        //    console.log("Wrong User Id or Password");
-        //    res.redirect('/PatientSignIn');
-        //}
+        else{
+            console.log("Wrong User Id or Password");
+           res.redirect('/PatientSignIn');
+        }
         db.close();
     });
     });
