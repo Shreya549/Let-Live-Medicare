@@ -58,7 +58,6 @@ app.post('/DocSignIn', function(req, res){
 
 app.get('/PatientSignIn', function(req, res){
     res.render('PatSignIn');
-
 })
 
 app.post('/Pat_Sign_In', function(req, res){
@@ -96,7 +95,7 @@ app.get('/storelogin', function(req, res){
     res.render('Store');
 })
 
-app.post('/pat_signin', function(req, res){
+app.post('/pat_signup', function(req, res){
     var name = req.body.name;
     var age = req.body.age;
     var gender = req.body.gender;
@@ -144,6 +143,7 @@ app.get('/PatSignUp', function(req, res){
 app.get('/StoreSignUp', function(req, res){
     res.render('StoreSignUp');
 })
+
 
 app.get('/style.css', function (req, res) {
     res.sendFile(__dirname + "/style.css");
