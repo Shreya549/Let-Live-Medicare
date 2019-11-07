@@ -30,19 +30,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <form>
+          <form method = post>
             <div class="form-group">
               <label for="exampleInputEmail1">Patient Number</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter Patient Number">
+                placeholder="Enter Patient Number" name = "patnum">
               <small id="emailHelp" class="form-text text-muted">Don't worry! Your data is safe with us.</small>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control" name = "pass" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="col-sm-3">
-              <button type="submit" class="btn btn-primary">Sign in</button>
+              <button type="submit" class="btn btn-primary" formaction = '/Pat_Sign_In'>Sign in</button>
           </form>
         </div>
       </div>

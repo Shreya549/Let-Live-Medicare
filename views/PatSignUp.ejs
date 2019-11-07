@@ -30,17 +30,17 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5 py-sm-1">
-                    <form action="/patSignIn" class="form-group">
+                    <form action="/pat_signin" class="form-group">
                         <div name="signup" id="signup">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" required class="form-control" id="name"
-                                    placeholder="Enter Full Name">
+                                    placeholder="Enter Full Name" name = 'name'>
                             </div>
                             <div class="row">
                                 <div class="form-group col-sm-3 px-sm">
                                     <label for="age">Age</label>
-                                    <input type="number" required class="form-control" id="age" placeholder="Enter Age">
+                                    <input type="number" name = "age" required class="form-control" id="age" placeholder="Enter Age">
                                 </div>
                                 <div class="form-group col-sm offset-sm-2">
                                     <label for="gender">Gender</label>
@@ -55,50 +55,45 @@
                             <div class="form-group">
                                 Email Address
                                 <input type="email" class="form-control" id="exampleInputEmail1" required
-                                    placeholder="Enter Email Id">
+                                    placeholder="Enter Email Id" name = "email">
                             </div>
                             <div class="form-group">
                                 <label for="username">User Name</label>
                                 <input type="text" required class="form-control" id="username"
-                                    placeholder="Enter UserName">
+                                    placeholder="Enter UserName" name = "username">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Password">
+                                    placeholder="Password" name = "password">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Mobile Number</label>
                                 <input type="text" required class="form-control" id="phone"
-                                    placeholder="Enter Mobile Number">
-                            </div>
-                            <div class="form-group">
-                                <label for="altphone">Alternate Mobile Number</label>
-                                <input type="text" class="form-control" id="altphone"
-                                    placeholder="Enter Alternate Mobile Number">
+                                    placeholder="Enter Mobile Number" name = "phone">
                             </div>
                             <div class="row">
                                 <div class="form-group col-sm-5">
                                     <label for="blood">Blood group</label>
                                     <input type="text" required class="form-control" id="blood"
-                                        placeholder="Enter Blood group">
+                                        placeholder="Enter Blood group" name = "blood">
                                 </div>
 
                                 <div class="form-group col-sm-3">
                                     <label for="height">Height</label>
                                     <input type="number" required class="form-control" id="height"
-                                        placeholder="Enter height in cms">
+                                        placeholder="Enter height in cms" name = "height">
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="weight">Weight</label>
                                     <input type="number" required class="form-control" id="weight"
-                                        placeholder="Enter weight in kgs">
+                                        placeholder="Enter weight in kgs" name = "weight">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="allergy">Allergies (if any)</label>
                                 <input type="text" required class="form-control" id="allergy"
-                                    placeholder="Enter allergies if any">
+                                    placeholder="Enter allergies if any" name = "allergy">
                             </div>
                             <div class="col-md-4">
                                 <button type="submit" onclick="signUp()" class="btn btn-primary">Submit</button>
