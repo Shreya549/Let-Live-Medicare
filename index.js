@@ -60,6 +60,7 @@ app.get('/PatientSignIn', function(req, res){
     res.render('PatSignIn');
 })
 
+
 app.post('/Pat_Sign_In', function(req, res){
     var MongoClient = require('mongodb').MongoClient;
     var url = "mongodb://localhost:27017/";
@@ -161,6 +162,10 @@ app.post('/store_sign_up', function(req, res){
         "location" : location
     }
 
+    dbo.collection("Store").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
+    });
     db.collection('Store').insertOne(data,function(err, collection){ 
         if (err) throw err; 
         
@@ -169,6 +174,38 @@ app.post('/store_sign_up', function(req, res){
             
      });
 });
+
+app.post('/Store_sign_in', function(req, res){
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    var pass = req.body.pass;
+    var sname = req.body.sname;
+
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("LetLiveMedicare");
+    var query = { "store" : sname };
+    res.render('/StoreHome');
+    dbo.collection("Store").find(query).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        //var passorig = result[0]["password"];
+        // if (pass == passorig)
+        // {
+        //     console.log("User Verified");
+        //     res.redirect('/');
+        // }
+
+        // else{
+        //     console.log("Wrong User Id or Password");
+        //    res.redirect('/storelogin');
+        // }
+        db.close();
+    });
+    });
+})
+
 
 app.get('/style.css', function (req, res) {
     res.sendFile(__dirname + "/style.css");
