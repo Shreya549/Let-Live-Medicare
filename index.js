@@ -144,6 +144,31 @@ app.get('/StoreSignUp', function(req, res){
     res.render('StoreSignUp');
 })
 
+app.post('/store_sign_up', function(req, res){
+    var name = req.body.name;
+    var sname = req.body.sname;
+    var email = req.body.email;
+    var phone = req.body.phone;
+    var password = req.body.password;
+    var location = req.body.location;
+
+    var data = {
+        "name" : name,
+        "sname" : sname,
+        "email" : email,
+        "password" : password,
+        "phone" : phone,
+        "location" : location
+    }
+
+    db.collection('Store').insertOne(data,function(err, collection){ 
+        if (err) throw err; 
+        
+        console.log("Record inserted Successfully"); 
+        res.render('Store');
+            
+     });
+});
 
 app.get('/style.css', function (req, res) {
     res.sendFile(__dirname + "/style.css");
