@@ -101,6 +101,12 @@ app.get('/Personal', function(req,res){
 app.get('/personal/Medicine', function(req,res){
     res.render('Medicine');
 })
+
+app.get('/personal/Medicine/SearchStore', function(req, res){
+    res.render('SearchStore');
+})
+
+
 app.get('/personal/Health', function(req,res){
     res.render('Health');
 })
@@ -156,10 +162,33 @@ app.post('/pat_search', function(req, res){
 app.get('/PatDetails', function(req, res){
     res.render('PatDetails');
 })
+
+app.get('/pat/test', function(req, res){
+    res.render('PatTest');
+})
+
+app.get('/pat/health', function(req, res){
+    res.render('PatHealth');
+})
+
+app.get('/pat/medicine', function(req, res){
+    res.render('PatMedicine');
+})
+
+app.get('/pat/addMedicine', function(req, res){
+    res.render('PatAddMed');
+})
+
+app.get('/pat/addTest',function(req, res){
+    res.render('AddTest');
+})
 app.get('/PatSignUp', function(req, res){
     res.render('PatSignUp');
 })
 
+app.get('/pat/UpdateHealth', function(req, res){
+    res.render('UpdateHealth');
+})
 app.get('/StoreSignUp', function(req, res){
     res.render('StoreSignUp');
 })
@@ -205,7 +234,7 @@ app.post('/Store_sign_in', function(req, res){
     if (err) throw err;
     var dbo = db.db("LetLiveMedicare");
     var query = { "store" : sname };
-    res.render('/StoreHome');
+    res.redirect('/StoreDetails');
     dbo.collection("Store").find(query).toArray(function(err, result) {
         if (err) throw err;
         console.log(result);
@@ -231,11 +260,9 @@ app.get('/style.css', function (req, res) {
 });
 
 
-app.get('/DocResult', function (req, res) {
-    res.sendFile(__dirname + "/DocResult.html");
-});
-
-
+app.get('/StoreDetails', function(req, res){
+    res.render('StoreDetails');
+})
 
 app.get('/images/android-chrome-192x192.png', function(req, res){
     res.sendFile(__dirname + "/images/android-chrome-192x192.png");
