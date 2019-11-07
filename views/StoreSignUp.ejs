@@ -30,40 +30,42 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5 py-sm-1">
+                <form class="form-group" method = post>
                     <div name="signup" id="signup">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" required class="form-control" id="name" placeholder="Enter Full Name">
+                            <input type="text" name = "name" required class="form-control" id="name" placeholder="Enter Full Name">
                         </div>
                         <div class="form-group">
-                            <label for="store_name">Store Name</label>
+                            <label for="store_name">Store Number</label>
                             <input type="number" required class="form-control" id="store_name"
-                                placeholder="Enter Store Name">
+                                placeholder="Enter Store Number" class = "sname">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email Address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" required
-                                placeholder="Enter Email Id">
+                                placeholder="Enter Email Id" name = "email">
                         </div>
                         <div class="form-group">
                             <label for="phone">Mobile Number</label>
                             <input type="text" required class="form-control" id="phone"
-                                placeholder="Enter Mobile Number">
+                                placeholder="Enter Mobile Number" name = "phone">
                         </div>
                         <div class="form-group">
-                            <label for="altphone">Alternate Mobile Number</label>
-                            <input type="text" class="form-control" id="altphone"
-                                placeholder="Enter Alternate Mobile Number">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password" name = "password">
                         </div>
                         <div class="form-group">
                             <label for="address">Store Location</label>
                             <input type="text" required class="form-control" id="address"
-                                placeholder="Enter Store Location">
+                                placeholder="Enter Store Location" name = "location">
                         </div>
                         <div class="col-md-4">
-                            <button formaction="Doctor_pg2.html" class="btn btn-primary">Sign Up</button>
+                            <button formaction="/store_sign_up" class="btn btn-primary">Sign Up</button>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
