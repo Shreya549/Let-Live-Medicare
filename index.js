@@ -79,7 +79,7 @@ app.post('/Pat_Sign_In', function(req, res){
         if (pass == passorig)
         {
             console.log("User Verified");
-            res.redirect('/SelfDetails');
+            res.redirect('/Personal');
         }
 
         else{
@@ -93,6 +93,18 @@ app.post('/Pat_Sign_In', function(req, res){
 
 app.get('/storelogin', function(req, res){
     res.render('Store');
+})
+app.get('/Personal', function(req,res){
+    res.render('Personal');
+})
+app.get('/Medicine', function(req,res){
+    res.render('Medicine');
+})
+app.get('/Health', function(req,res){
+    res.render('Health');
+})
+app.get('/Test', function(req,res){
+    res.render('Test');
 })
 
 app.post('/pat_signup', function(req, res){
