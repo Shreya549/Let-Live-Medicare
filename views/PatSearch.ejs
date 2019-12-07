@@ -29,16 +29,16 @@
     <div class="jumbotron">
         <div class="container">
             <div class="col-lg-6">
-                <form name="search" id="search">
+                <form name="search" id="search" method = post>
                     <div class="form-group">
                         <label for="search">
                             <h1>Find Patient</h1>
                         </label>
                         <input type="text" required class="form-control" id="search"
-                            placeholder="Enter patient user name">
+                            placeholder="Enter patient user name" name = uname>
                     </div>
                     <div class="col-sm-4">
-                        <button type="submit" id="btnsearch" class="btn btn-primary">Search</button>
+                        <button type="submit" formaction = "/pat_search" id="btnsearch" class="btn btn-primary">Search</button>
                     </div>
                 </form>
             </div>
